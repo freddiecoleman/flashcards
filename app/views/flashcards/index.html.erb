@@ -1,2 +1,7 @@
-<h1>Flashcards#index</h1>
-<p>Find me in app/views/flashcards/index.html.erb</p>
+<h1>Flashcards</h1>
+<%= render 'form' %>
+<ul>
+<% for flashcard in @flashcards %>
+<li id="flashcard_<%= flashcard.id %>"><%= flashcard.front %> | <%= flashcard.back %> (<%= link_to 'Edit', edit_flashcard_path(flashcard) %>, <%= link_to 'Delete', flashcard, method: 'delete' %>)</li>
+<% end %>
+</ul>

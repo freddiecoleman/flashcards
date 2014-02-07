@@ -26,6 +26,7 @@ group :test, :development do
 	gem 'capybara'
 	gem 'guard-rspec'
 	gem 'growl'
+	gem 'launchy'
 end
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
