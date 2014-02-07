@@ -1,25 +1,29 @@
-<h1>Flashcards</h1>
-<%= render 'form' %>
 <div class="row">
-	<table>
-		<tr>
-			<th>ID</th>
-			<th>Deck</th>
-			<th>Front</th>
-			<th>Back</th>
-			<th>Tools</th>
-		</tr>
-		<% for flashcard in @flashcards %>
-		<tr>
-			<td>0</td>
-			<td>Placeholder</td>
-			<td><%= flashcard.front %></td>
-			<td><%= flashcard.back %></td>
-			<td id="flashcard_<%= flashcard.id %>">
-				<%= link_to 'Edit', edit_flashcard_path(flashcard), class: "button tiny" %> 
-				<%= link_to 'Delete', flashcard, class: "button tiny alert", method: 'delete' %>
-			</td>
-		</tr>
-		<% end %>
-	</table>
+    <div class="large-12 columns">
+		<h3>Flashcard Manager</h3>
+		<%= render 'form' %>
+		<table width="100%">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Deck</th>
+					<th>Front</th>
+					<th>Back</th>
+					<th>Tools</th>
+				</tr>
+			</thead>
+			<% for flashcard in @flashcards %>
+			<tr>
+				<td>0</td>
+				<td>Placeholder</td>
+				<td><%= flashcard.front %></td>
+				<td><%= flashcard.back %></td>
+				<td id="flashcard_<%= flashcard.id %>">
+					<%= link_to 'Edit', edit_flashcard_path(flashcard), class: "button tiny" %> 
+					<%= link_to 'Delete', flashcard, class: "button tiny alert", method: 'delete' %>
+				</td>
+			</tr>
+			<% end %>
+		</table>
+	</div>
 </div>

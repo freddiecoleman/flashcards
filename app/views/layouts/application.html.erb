@@ -38,11 +38,17 @@
     </nav>
 
     <% flash.each do |name, message| %>
-      <%= content_tag :div, message, id: "flash_#{name}" %>
+      <div class="row">
+        <div class="large-12 columns">
+          <div data-alert class="alert-box">
+            <%= message %>
+          </div>
+        </div>
+      </div>
     <% end %>
 
     <%= yield %>
-    
+
     <%= javascript_include_tag "application" %>
   </body>
 </html>
