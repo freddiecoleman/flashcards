@@ -1,7 +1,23 @@
 <%= form_for @flashcard do |f| %>
-	<%= f.label :front %>
-	<%= f.text_field :front %>
-	<%= f.label :back %>
-	<%= f.text_field :back %>
-	<%= f.submit %>
+<div class="row">
+	<div class="row">
+		<div class="small-3 columns">
+			<%= f.label :front, class: "right inline" %>
+		</div>
+		<div class="small-9 columns">
+			<%= f.text_area :front %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-3 columns">
+			<%= f.label :back, class: "right inline" %>
+		</div>
+		<div class="small-9 columns">
+			<%= f.text_area :back %>
+		</div>
+	</div>
+	<div class="row">
+		<p class="small-9 small-offset-3 columns"><%= f.submit %></p>
+	</div>
+</div>
 <% end %>

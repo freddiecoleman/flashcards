@@ -1,7 +1,25 @@
 <h1>Flashcards</h1>
 <%= render 'form' %>
-<ul>
-<% for flashcard in @flashcards %>
-<li id="flashcard_<%= flashcard.id %>"><%= flashcard.front %> | <%= flashcard.back %> (<%= link_to 'Edit', edit_flashcard_path(flashcard) %>, <%= link_to 'Delete', flashcard, method: 'delete' %>)</li>
-<% end %>
-</ul>
+<div class="row">
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Deck</th>
+			<th>Front</th>
+			<th>Back</th>
+			<th>Tools</th>
+		</tr>
+		<% for flashcard in @flashcards %>
+		<tr>
+			<td>0</td>
+			<td>Placeholder</td>
+			<td><%= flashcard.front %></td>
+			<td><%= flashcard.back %></td>
+			<td id="flashcard_<%= flashcard.id %>">
+				<%= link_to 'Edit', edit_flashcard_path(flashcard), class: "button tiny" %> 
+				<%= link_to 'Delete', flashcard, class: "button tiny alert", method: 'delete' %>
+			</td>
+		</tr>
+		<% end %>
+	</table>
+</div>
