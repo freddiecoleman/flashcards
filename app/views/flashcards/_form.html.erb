@@ -1,15 +1,17 @@
 <%= form_for @flashcard do |f| %>
 	<div class="row">
-		<div class="small-12 columns">
+		<div class="small-5 columns">
 			<%= f.label :front %>
 			<%= f.text_area :front %>
 		</div>
+		<div class="small-7 columns"></div>
 	</div>
 	<div class="row">
-		<div class="small-12 columns">
+		<div class="small-5 columns">
 			<%= f.label :back %>
 			<%= f.text_area :back %>
 		</div>
+		<div class="small-7 columns"></div>
 	</div>
 	<div class="row">
 		<p class="small-12 columns"><%= f.submit class: "button" %></p>

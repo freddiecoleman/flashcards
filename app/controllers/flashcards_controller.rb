@@ -23,8 +23,12 @@ class FlashcardsController < ApplicationController
   end
 
   def destroy
-  	Flashcard.destroy params[:id]
-  	redirect_to :back, notice: 'Flashcard has been deleted.'
+    @flashcard = Flashcard.find params[:id]
+  	@flashcard.destroy
+    respond_to do |format|
+      format.html { redirect_to :back, notice: 'Flashcard has been deleted.' }
+      format.js
+    end
   end
 
   def flashcard_params
