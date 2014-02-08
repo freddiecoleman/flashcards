@@ -3,11 +3,11 @@ class DecksController < ApplicationController
   
   def index
   	@deck = Deck.new
-  	@decks = Deck.all
+  	@decks = @current_user.decks.all
   end
 
   def create
-  	Deck.create deck_params
+  	@current_user.decks.create deck_params
   	redirect_to :back
   end
 

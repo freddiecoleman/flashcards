@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
 	has_secure_password
 	validates_uniqueness_of :email
 	before_create { generate_token(:auth_token) }
+	has_many :decks, dependent: :destroy
+	has_many :flashcards, through: :decks
 
 	def generate_token(column)
 		begin

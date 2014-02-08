@@ -5,10 +5,9 @@ class FlashcardsController < ApplicationController
   	@flashcard = Flashcard.new
   	
     if params[:deck_id] != nil
-      @deck = Deck.find(params[:deck_id])
-      @flashcards = Flashcard.where deck_id: params[:deck_id]
+      @flashcards = @current_user.flashcards.where deck_id: params[:deck_id]
     else
-      @flashcards = Flashcard.all
+      @flashcards = @current_user.flashcards.all
     end
   end
 
