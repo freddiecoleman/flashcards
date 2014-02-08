@@ -26,12 +26,8 @@
           <section class="top-bar-section">
             <!-- Right Nav Section -->
             <ul class="right">
-              <li class="has-dropdown">
-                <a href="#">Tools</a>
-                <ul class="dropdown">
-                  <li><%= link_to 'Manage Flashcards', flashcards_path %></li>
-                </ul>
-              </li>
+              <li><%= link_to 'Manage Decks', decks_path %></li>
+              <li><%= link_to 'Manage Flashcards', flashcards_path %></li>
               <li class="has-form">
                 <a href="http://foundation.zurb.com/docs" class="button">Logout</a>
               </li>
@@ -44,10 +40,18 @@
     <div class="row">
       <div class="large-12 columns">
 
-        <div class="row" id="ajax-delete">
+        <div class="row" id="ajax-delete-flashcard">
           <div class="large-12 columns">
             <div data-alert class="alert-box">
               Flashcard has been deleted.
+            </div>
+          </div>
+        </div>
+
+        <div class="row" id="ajax-delete-deck">
+          <div class="large-12 columns">
+            <div data-alert class="alert-box">
+              Deck has been deleted.
             </div>
           </div>
         </div>

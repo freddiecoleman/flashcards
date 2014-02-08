@@ -13,6 +13,11 @@
 
  *= require_tree .
  */
-#ajax-delete{
+#ajax-delete-flashcard{
 	display: none;
+	margin-top: 10px;
+}
+#ajax-delete-deck{
+	display: none;
+	margin-top: 10px;
 }

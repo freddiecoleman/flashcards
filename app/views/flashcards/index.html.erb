@@ -14,13 +14,13 @@
 			</thead>
 			<% for flashcard in @flashcards %>
 			<tr id="flashcard_<%= flashcard.id %>">
-				<td>0</td>
+				<td><%= flashcard.id %></td>
 				<td>Placeholder</td>
 				<td><%= flashcard.front %></td>
 				<td><%= flashcard.back %></td>
 				<td>
 					<%= link_to 'Edit', edit_flashcard_path(flashcard), class: "button tiny" %> 
-					<%= link_to 'Delete', flashcard, class: "button tiny alert", method: :delete, data: { confirm: 'Are you sure you want to delete this flashcard?' }, remote: true %>		
+					<%= link_to 'Delete', flashcard, class: "button tiny alert", method: :delete, remote: true %>		
 				</td>
 			</tr>
 			<% end %>
