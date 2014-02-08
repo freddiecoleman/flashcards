@@ -28,9 +28,18 @@
             <ul class="right">
               <li><%= link_to 'Manage Decks', decks_path %></li>
               <li><%= link_to 'Manage Flashcards', flashcards_path %></li>
-              <li class="has-form">
-                <%= link_to "Register", new_user_path, class: "button" %>
-              </li>
+              <% if current_user %>
+                <li class="has-form">
+                  <%= link_to "Logout", logout_path, class: "button" %>
+                </li>
+              <% else %>
+                <li class="has-form">
+                  <%= link_to "Register", signup_path %>
+                </li>
+                <li class="has-form">
+                  <%= link_to "Login", login_path, class: "button" %>
+                </li>
+              <% end %>
             </ul>
           </section>
         </nav>

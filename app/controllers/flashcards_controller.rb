@@ -1,5 +1,6 @@
 class FlashcardsController < ApplicationController
-
+  before_filter :authorise
+  
   def index
   	@flashcard = Flashcard.new
   	

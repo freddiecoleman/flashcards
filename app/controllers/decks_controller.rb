@@ -1,4 +1,6 @@
 class DecksController < ApplicationController
+  before_filter :authorise
+  
   def index
   	@deck = Deck.new
   	@decks = Deck.all
