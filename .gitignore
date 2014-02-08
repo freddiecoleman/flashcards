@@ -15,3 +15,5 @@
 /log/*.log
 /tmp
 /.DS_Store
+/spec/features/.DS_Store
+spec/features/.DS_Store
