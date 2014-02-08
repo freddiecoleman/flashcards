@@ -15,7 +15,8 @@
 				<td><%= deck.id %></td>
 				<td><%= deck.name %></td>
 				<td>
-					<%= link_to 'Edit', edit_deck_path(deck), class: "button tiny" %> 
+					<%= link_to 'Flashcards', deck_flashcards_path(deck), class: "button tiny" %> 
+					<%= link_to 'Edit', edit_deck_path(deck), class: "button success tiny" %> 
 					<%= link_to 'Delete', deck, class: "button tiny alert", method: :delete, remote: true %>
 				</td>
 			</tr>

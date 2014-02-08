@@ -64,7 +64,7 @@ describe "Decks" do
   		page.should have_no_content 'deck name test'
       visit flashcards_path
   	end
-
+    # need a test for clicking flashcards button to see if it goes to a page that only shows flashcards in that deck
     # need a test for testing if flashcards are deleted along with the deck
   end
 end

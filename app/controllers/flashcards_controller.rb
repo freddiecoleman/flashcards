@@ -1,7 +1,14 @@
 class FlashcardsController < ApplicationController
+
   def index
   	@flashcard = Flashcard.new
-  	@flashcards = Flashcard.all
+  	
+    if params[:deck_id] != nil
+      @deck = Deck.find(params[:deck_id])
+      @flashcards = Flashcard.where deck_id: params[:deck_id]
+    else
+      @flashcards = Flashcard.all
+    end
   end
 
   def create
