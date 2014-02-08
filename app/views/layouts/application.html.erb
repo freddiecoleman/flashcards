@@ -26,9 +26,9 @@
           <section class="top-bar-section">
             <!-- Right Nav Section -->
             <ul class="right">
-              <li><%= link_to 'Manage Decks', decks_path %></li>
-              <li><%= link_to 'Manage Flashcards', flashcards_path %></li>
               <% if current_user %>
+                <li><%= link_to 'Manage Decks', decks_path %></li>
+                <li><%= link_to 'Manage Flashcards', flashcards_path %></li>
                 <li class="has-form">
                   <%= link_to "Logout", logout_path, class: "button" %>
                 </li>
