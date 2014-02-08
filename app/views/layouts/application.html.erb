@@ -29,7 +29,7 @@
               <li><%= link_to 'Manage Decks', decks_path %></li>
               <li><%= link_to 'Manage Flashcards', flashcards_path %></li>
               <li class="has-form">
-                <a href="http://foundation.zurb.com/docs" class="button">Logout</a>
+                <%= link_to "Register", new_user_path, class: "button" %>
               </li>
             </ul>
           </section>
@@ -57,13 +57,13 @@
         </div>
 
         <% flash.each do |name, message| %>
-          <div class="row">
-            <div class="large-12 columns">
-              <div data-alert class="alert-box">
-                <%= message %>
-              </div>
+        <div class="row" id="homepage-alert">
+          <div class="large-12 columns">
+            <div data-alert class="alert-box">
+              <%= message %>
             </div>
           </div>
+        </div>
         <% end %>
 
         <%= yield %>

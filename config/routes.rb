@@ -1,4 +1,6 @@
 Flashcards::Application.routes.draw do
+  resources :users
+
   get "welcome/index"
   root to: 'welcome#index'
   resources :decks, :flashcards
