@@ -12,50 +12,54 @@
   </head>
 
   <body>
-
-    <nav class="top-bar" data-topbar>
-      <ul class="title-area">
-        <li class="name">
-          <h1><a href="#">MyFlashcards</a></h1>
-        </li>
-        <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-      </ul>
-
-      <section class="top-bar-section">
-        <!-- Right Nav Section -->
-        <ul class="right">
-          <li class="has-dropdown">
-            <a href="#">Right Button with Dropdown</a>
-            <ul class="dropdown">
-              <li><a href="#">First link in dropdown</a></li>
-            </ul>
-          </li>
-          <li class="has-form">
-            <a href="http://foundation.zurb.com/docs" class="button">Logout</a>
-          </li>
-        </ul>
-      </section>
-    </nav>
-
-    <div class="row" id="ajax-delete">
+    <div class="row">
       <div class="large-12 columns">
-        <div data-alert class="alert-box">
-          Flashcard has been deleted.
-        </div>
-      </div>
-    </div>
 
-    <% flash.each do |name, message| %>
-      <div class="row">
-        <div class="large-12 columns">
-          <div data-alert class="alert-box">
-            <%= message %>
+        <nav class="top-bar" data-topbar>
+          <ul class="title-area">
+            <li class="name">
+              <h1><%= link_to 'MyFlashcards', '/' %></h1>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+          </ul>
+
+          <section class="top-bar-section">
+            <!-- Right Nav Section -->
+            <ul class="right">
+              <li class="has-dropdown">
+                <a href="#">Tools</a>
+                <ul class="dropdown">
+                  <li><%= link_to 'Manage Flashcards', flashcards_path %></li>
+                </ul>
+              </li>
+              <li class="has-form">
+                <a href="http://foundation.zurb.com/docs" class="button">Logout</a>
+              </li>
+            </ul>
+          </section>
+        </nav>
+
+        <div class="row" id="ajax-delete">
+          <div class="large-12 columns">
+            <div data-alert class="alert-box">
+              Flashcard has been deleted.
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
 
-    <%= yield %>
+        <% flash.each do |name, message| %>
+          <div class="row">
+            <div class="large-12 columns">
+              <div data-alert class="alert-box">
+                <%= message %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+        <%= yield %>
+      </div>
+    </div>
 
     <%= javascript_include_tag "application" %>
   </body>
