@@ -1,0 +1,12 @@
+<%= form_for @deck do |f| %>
+	<div class="row">
+		<div class="small-5 columns">
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+		</div>
+		<div class="small-7 columns"></div>
+	</div>
+	<div class="row">
+		<p class="small-12 columns"><%= f.submit class: "button" %></p>
+	</div>
+<% end %>

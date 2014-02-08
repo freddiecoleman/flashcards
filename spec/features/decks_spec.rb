@@ -48,7 +48,7 @@ describe "Decks" do
 
   		fill_in 'Name', with: ''
 
-  		click_button 'Update Flashcard'
+  		click_button 'Update Deck'
 
   		current_path.should == edit_deck_path(@deck)
 
