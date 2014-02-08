@@ -3,7 +3,8 @@ require 'spec_helper'
 describe "Flashcards" do
 
   before do
-  	@flashcard = Flashcard.create front: 'this is testing the front of a flashcard', back: 'this is testing the back of a flashcard' 
+    @deck = Deck.create name: 'test deck'
+  	@flashcard = Flashcard.create front: 'this is testing the front of a flashcard', back: 'this is testing the back of a flashcard', deck_id: @deck.id
   end
 
   describe "GET /flashcards" do

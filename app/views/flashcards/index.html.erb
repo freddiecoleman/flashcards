@@ -15,7 +15,7 @@
 			<% for flashcard in @flashcards %>
 			<tr id="flashcard_<%= flashcard.id %>">
 				<td><%= flashcard.id %></td>
-				<td>Placeholder</td>
+				<td><%= flashcard.deck.name %></td>
 				<td><%= flashcard.front %></td>
 				<td><%= flashcard.back %></td>
 				<td>

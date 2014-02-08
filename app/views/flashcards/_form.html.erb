@@ -4,7 +4,11 @@
 			<%= f.label :front %>
 			<%= f.text_area :front %>
 		</div>
-		<div class="small-7 columns"></div>
+		<div class="small-4 columns">
+			<%= f.label :deck_id %>
+			<%= f.select :deck_id, Deck.all.collect { |a| [a.name, a.id]} %>
+		</div>
+		<div class="small-3 columns"></div>
 	</div>
 	<div class="row">
 		<div class="small-5 columns">

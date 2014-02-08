@@ -62,6 +62,9 @@ describe "Decks" do
   		find("#deck_#{@deck.id}").click_link 'Delete'
   		page.should have_content 'Deck has been deleted.'
   		page.should have_no_content 'deck name test'
+      visit flashcards_path
   	end
+
+    # need a test for testing if flashcards are deleted along with the deck
   end
 end

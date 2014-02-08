@@ -32,6 +32,6 @@ class FlashcardsController < ApplicationController
   end
 
   def flashcard_params
-    params.require(:flashcard).permit(:front, :back)
+    params.require(:flashcard).permit(:front, :back, :deck_id)
   end
 end
