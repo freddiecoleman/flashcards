@@ -1,5 +1,5 @@
 #Spaced Repetition Flashcard System
 
-This project uses research into the psychology of memory to create a machine learning algorithm that assists the users with memorisation of information.
+This is a spaced repetition flashcard system built using Ruby on Rails.
 
-So far this is very early in the project, I am considering using MongoDB as the data shall be unstructured. Watch this space.
+The underlying algorithm is based on research into the pshychology of memory. The result is an application that can assist the user with memorisation of large amounts of information with very little time investment.
