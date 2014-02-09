@@ -3,15 +3,20 @@
 		<form>
 		  <fieldset>
 		    <legend>Front</legend>
-		    <center><h2>Le front of card</h2></center>
+		    <center><h2><%= @flashcard.front %></h2></center>
 		  </fieldset>
 		  <fieldset>
 		    <legend>Back</legend>
-			<center><a href="#" class="button">Reveal Answer</a></center>
+		    <center>
+		    	<%= link_to_function "Reveal Answer", "$('#flashcard-button').hide();$('#flashcard-back').fadeIn();$('#buttons').fadeIn();", class: 'button', id: 'flashcard-button' %>
+		    </center>
+		    <div id="flashcard-back">
+		    	<center><h3><%= @flashcard.back %></h3></center>
+		    </div>
 		    </label>
 		  </fieldset>
 		</form>
-		<ul class="button-group even-4 round">
+		<ul class="button-group even-4 round" id="buttons">
 		  <li><a href="#" class="button secondary">Again</a></li>
 		  <li><a href="#" class="button secondary">Hard</a></li>
 		  <li><a href="#" class="button secondary">Good</a></li>
