@@ -17,10 +17,12 @@
 		  </fieldset>
 		</form>
 		<ul class="button-group even-4 round" id="buttons">
-		  <li><%= link_to 'Again', deck_review_index_path(params[:deck_id]), method: :post, class: "button secondary" %></li>
-		  <li><%= link_to 'Hard', deck_review_index_path(params[:deck_id]), method: :post, class: "button secondary" %></li>
-		  <li><%= link_to 'Good', deck_review_index_path(params[:deck_id]), method: :post, class: "button secondary" %></li>
-		  <li><%= link_to 'Easy', deck_review_index_path(params[:deck_id]), method: :post, class: "button secondary" %></li>
+			<%= form_tag("/decks/#{params[:deck_id]}/review/#{@flashcard.id}", method: :patch) do %>
+				<li><%= submit_tag "Again", name: "response", class: "button secondary" %></li>
+				<li><%= submit_tag "Hard", name: "response", class: "button secondary" %></li>
+				<li><%= submit_tag "Good", name: "response", class: "button secondary" %></li>
+				<li><%= submit_tag "Easy", name: "response", class: "button secondary" %></li>
+			<% end %>
 		</ul>
 	</div>
 </div>

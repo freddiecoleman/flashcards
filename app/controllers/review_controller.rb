@@ -2,7 +2,7 @@ class ReviewController < ApplicationController
 	before_filter :authorise
 	def index
 		if params[:deck_id] != nil
-	      if !@flashcard = @current_user.flashcards.where("due <= ? AND deck_id = ?", Time.now, params[:deck_id]).first
+	      if !@flashcard = @current_user.flashcards.where("due <= ? AND deck_id = ?", Time.now, params[:deck_id]).order(:last_review).first
 	      	redirect_to decks_path, notice: "No cards in this deck are ready for review."
 	      end
 	    else
@@ -14,7 +14,20 @@ class ReviewController < ApplicationController
 	# then add the new interval and easiness to the db as well
 	# dont need to do anything with the old interval as that is only used on input
 
-	def create
+	def update
+		@flashcard = Flashcard.find(params[:id])#WARNING CURRENT SECURITY RISK OTHER USERS COULD RESPOND TO OTHER PEOPLES CARDS FIX LATER
+		if params[:response] == "Again"
+			response = 0
+		elsif params[:response] == "Hard"
+			response = 1
+		elsif params[:response] == "Good"
+			response = 2
+		elsif params[:response] == "Easy"
+			response = 3
+		end
+
+		sm2 = SpacedRepetition::Sm2.new(response, @flashcard.interval, @flashcard.ease_factor)
+		@flashcard.update_attributes interval: sm2.interval, ease_factor: sm2.easiness_factor, due: Time.now+sm2.interval.days, last_review: Time.now
 		redirect_to deck_review_index_path(params[:deck_id])
 	end
 
