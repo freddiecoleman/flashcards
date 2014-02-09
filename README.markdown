@@ -16,9 +16,9 @@ Back-end:
 * SQLite
 
 Testing:
-* RSpec
-* Capybara
-* Guard
+* RSpec - Domain Specific Language for testing in Ruby
+* Capybara - Acceptance testing
+* Guard - Auto testing
 
 Tools:
 * Sublime Text 2 (best text editor ever!!!)
