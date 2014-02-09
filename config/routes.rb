@@ -5,8 +5,8 @@ Flashcards::Application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
   resources :users, :sessions, :password_resets
-
   resources :decks, :flashcards, :review
+  resources :stats
 
   resources :decks do
     resources :flashcards

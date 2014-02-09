@@ -14,6 +14,8 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'foundation-rails'
 
+gem 'lazy_high_charts'
+
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
