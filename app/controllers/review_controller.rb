@@ -10,6 +10,14 @@ class ReviewController < ApplicationController
 	    end
 	end
 
+	#when review a card need to make the new due date = today + the NEW interval.
+	# then add the new interval and easiness to the db as well
+	# dont need to do anything with the old interval as that is only used on input
+
+	def create
+		redirect_to deck_review_index_path(params[:deck_id])
+	end
+
 	def show
 		
 	end

@@ -14,6 +14,7 @@ Front-end:
 Back-end:
 * Ruby on Rails
 * SQLite3
+* SM2 algorithm implemented in Ruby
 
 Testing:
 * RSpec - Domain Specific Language for testing in Ruby

@@ -1,4 +1,5 @@
 class Flashcard < ActiveRecord::Base
+	include SpacedRepetition
 	validates :front, presence: true
 	validates :back, presence: true
 	belongs_to :deck
@@ -15,7 +16,9 @@ class Flashcard < ActiveRecord::Base
 private
 
     def default_values
-      self.due ||= Time.now + 2.weeks
+      self.due ||= Time.now
+      self.interval ||= 1
+      self.ease_factor ||= 2.6
     end
     module Helpers
 		extend ActionView::Helpers::DateHelper

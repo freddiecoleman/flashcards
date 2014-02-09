@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140209133421) do
+ActiveRecord::Schema.define(version: 20140209171306) do
 
   create_table "decks", force: true do |t|
     t.string   "name"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20140209133421) do
     t.datetime "updated_at"
     t.integer  "deck_id"
     t.datetime "due"
+    t.integer  "interval"
+    t.decimal  "ease_factor"
   end
 
   add_index "flashcards", ["deck_id"], name: "index_flashcards_on_deck_id"

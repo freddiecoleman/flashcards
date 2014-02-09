@@ -17,10 +17,10 @@
 		  </fieldset>
 		</form>
 		<ul class="button-group even-4 round" id="buttons">
-		  <li><a href="#" class="button secondary">Again</a></li>
-		  <li><a href="#" class="button secondary">Hard</a></li>
-		  <li><a href="#" class="button secondary">Good</a></li>
-		  <li><a href="#" class="button secondary">Easy</a></li>
+		  <li><%= link_to 'Again', deck_review_index_path(params[:deck_id]), method: :post, class: "button secondary" %></li>
+		  <li><%= link_to 'Hard', deck_review_index_path(params[:deck_id]), method: :post, class: "button secondary" %></li>
+		  <li><%= link_to 'Good', deck_review_index_path(params[:deck_id]), method: :post, class: "button secondary" %></li>
+		  <li><%= link_to 'Easy', deck_review_index_path(params[:deck_id]), method: :post, class: "button secondary" %></li>
 		</ul>
 	</div>
 </div>
