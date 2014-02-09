@@ -18,9 +18,8 @@ Back-end:
 * SM2 algorithm implemented in Ruby
 
 Testing:
-* RSpec - Domain Specific Language for testing in Ruby
-* Capybara - Acceptance testing
-* Guard - Test automation
+* RSpec
+* Capybara
 
 Tools:
 * Sublime Text 2 (best text editor ever!!!)
