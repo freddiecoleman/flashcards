@@ -1,20 +1,38 @@
 class StatsController < ApplicationController
 	def index
-		@chart = LazyHighCharts::HighChart.new('graph') do |f|
-		    f.title({ :text=>"Combination chart"})
-		    f.options[:xAxis][:categories] = ['Apples', 'Oranges', 'Pears', 'Bananas', 'Plums']
-		    f.labels(:items=>[:html=>"Total fruit consumption", :style=>{:left=>"40px", :top=>"8px", :color=>"black"} ])      
-		    f.series(:type=> 'column',:name=> 'Jane',:data=> [3, 2, 1, 3, 4])
-		    f.series(:type=> 'column',:name=> 'John',:data=> [2, 3, 5, 7, 6])
-		    f.series(:type=> 'column', :name=> 'Joe',:data=> [4, 3, 3, 9, 0])
-		    f.series(:type=> 'spline',:name=> 'Average', :data=> [3, 2.67, 3, 6.33, 3.33])
-		    f.series(:type=> 'pie',:name=> 'Total consumption', 
-		      :data=> [
-		        {:name=> 'Jane', :y=> 13, :color=> 'red'}, 
-		        {:name=> 'John', :y=> 23,:color=> 'green'},
-		        {:name=> 'Joe', :y=> 19,:color=> 'blue'}
-		      ],
-		      :center=> [100, 80], :size=> 100, :showInLegend=> false)
+		@chart = LazyHighCharts::HighChart.new('pie') do |f|
+      		f.chart({:defaultSeriesType=>"pie" , :margin=> [50, 200, 60, 170]} )
+		      series = {
+		               :type=> 'pie',
+		               :name=> 'Browser share',
+		               :data=> [
+		                  ['Firefox',   45.0],
+		                  ['IE',       26.8],
+		                  {
+		                     :name=> 'Chrome',    
+		                     :y=> 12.8,
+		                     :sliced=> true,
+		                     :selected=> true
+		                  },
+		                  ['Safari',    8.5],
+		                  ['Opera',     6.2],
+		                  ['Others',   0.7]
+		               ]
+		      }
+		      f.series(series)
+		      f.options[:title][:text] = "THA PIE"
+		      f.legend(:layout=> 'vertical',:style=> {:left=> 'auto', :bottom=> 'auto',:right=> '50px',:top=> '100px'}) 
+		      f.plot_options(:pie=>{
+		        :allowPointSelect=>true, 
+		        :cursor=>"pointer" , 
+		        :dataLabels=>{
+		          :enabled=>true,
+		          :color=>"black",
+		          :style=>{
+		            :font=>"13px Trebuchet MS, Verdana, sans-serif"
+		          }
+		        }
+		      })
 		end
 	end
 end
