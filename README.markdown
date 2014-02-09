@@ -8,6 +8,7 @@ The underlying algorithm is based on research into the pshychology of memory. Th
 
 Front-end:
 * Foundation 5
+* SASS
 * jQuery
 
 Back-end:
