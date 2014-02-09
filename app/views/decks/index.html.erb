@@ -8,7 +8,7 @@
 					<th>ID</th>
 					<th>Name</th>
 					<th>Card count</th>
-					<th>Manage</th>
+					<th>Action</th>
 					<th>Tools</th>
 				</tr>
 			</thead>
@@ -17,7 +17,7 @@
 				<td><%= deck.id %></td>
 				<td><%= deck.name %></td>
 				<td><%= deck.flashcards.count %></td>
-				<td><%= link_to 'Flashcards', deck_flashcards_path(deck), class: "button tiny" %></td>
+				<td><%= link_to 'Review Deck', deck_review_index_path(deck), class: "button tiny secondary" %> <%= link_to 'Manage Flashcards', deck_flashcards_path(deck), class: "button tiny secondary" %></td>
 				<td>
 					<%= link_to 'Edit', edit_deck_path(deck), class: "button success tiny" %> 
 					<%= link_to 'Delete', deck, class: "button tiny alert", method: :delete, remote: true %>

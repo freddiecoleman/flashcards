@@ -1,18 +1,18 @@
 Flashcards::Application.routes.draw do
+  root to: 'welcome#index'
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
-  resources :review
-  resources :users
-  resources :sessions
-  resources :password_resets
+  resources :users, :sessions, :password_resets
 
-  root to: 'welcome#index'
-  resources :decks, :flashcards
+  resources :decks, :flashcards, :review
+
   resources :decks do
     resources :flashcards
+    resources :review
   end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
