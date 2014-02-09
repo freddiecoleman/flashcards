@@ -13,8 +13,7 @@ Front-end:
 
 Back-end:
 * Ruby on Rails
-* ActiveRecord
-* SQLite
+* sqlite3
 
 Testing:
 * RSpec - Domain Specific Language for testing in Ruby
