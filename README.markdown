@@ -10,6 +10,7 @@ Front-end:
 * Foundation 5
 * SASS
 * jQuery
+* Highcharts
 
 Back-end:
 * Ruby on Rails
