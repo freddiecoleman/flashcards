@@ -7,6 +7,7 @@
 				<tr>
 					<th>ID</th>
 					<th>Name</th>
+					<th>Card count</th>
 					<th>Manage</th>
 					<th>Tools</th>
 				</tr>
@@ -15,6 +16,7 @@
 			<tr id="deck_<%= deck.id %>">
 				<td><%= deck.id %></td>
 				<td><%= deck.name %></td>
+				<td><%= deck.flashcards.count %></td>
 				<td><%= link_to 'Flashcards', deck_flashcards_path(deck), class: "button tiny" %></td>
 				<td>
 					<%= link_to 'Edit', edit_deck_path(deck), class: "button success tiny" %> 
