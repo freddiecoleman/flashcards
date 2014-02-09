@@ -18,7 +18,7 @@ Back-end:
 Testing:
 * RSpec - Domain Specific Language for testing in Ruby
 * Capybara - Acceptance testing
-* Guard - Auto testing
+* Guard - Test automation
 
 Tools:
 * Sublime Text 2 (best text editor ever!!!)
