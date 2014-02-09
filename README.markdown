@@ -3,3 +3,23 @@
 This is a spaced repetition flashcard system built using Ruby on Rails.
 
 The underlying algorithm is based on research into the pshychology of memory. The result is an application that can assist the user with memorisation of large amounts of information with very little time investment.
+
+## Technologies used
+
+Front-end:
+* Foundation 5
+* jQuery
+
+Back-end:
+* Ruby on Rails
+* ActiveRecord
+* SQLite
+
+Testing:
+* RSpec
+* Capybara
+* Guard
+
+Tools:
+* Sublime Text 2 (best text editor ever!!!)
+* Growl notify
