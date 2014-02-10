@@ -16,7 +16,7 @@ private
 
     def default_values
       self.due ||= Time.now
-      self.interval ||= 1
+      self.interval ||= 0
       self.ease_factor ||= 2.6
       self.last_review ||= Time.now
     end
