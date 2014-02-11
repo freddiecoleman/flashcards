@@ -3,13 +3,44 @@ require 'spec_helper'
 describe "Flashcards" do
 
   before do
-    @deck = Deck.create name: 'test deck'
-  	@flashcard = Flashcard.create front: 'this is testing the front of a flashcard', back: 'this is testing the back of a flashcard', deck_id: @deck.id
+    # Register a new user to be used during the testing process
+    visit signup_path
+    fill_in 'Email', with: 'testuser'
+    fill_in 'Password', with: 'testpass'
+    fill_in 'Password confirmation', with: 'testpass'
+    click_button 'Create User'
+    current_path.should == root_path
+    page.should have_content 'Thank you for signing up!'
+
+    #login
+    visit login_path
+    fill_in 'Email', with: 'testuser'
+    fill_in 'Password', with: 'testpass'
+    click_button 'Log In'
+
+    # Create a deck
+    visit decks_path
+    fill_in 'Name', with: 'test deck'
+    click_button 'Create Deck'
+    current_path.should == decks_path
+    page.should have_content 'Deck created.'
+
+    # Create a flashcard
+    visit flashcards_path
+    fill_in 'Front', with: 'this is testing the front of a flashcard'
+    fill_in 'Back', with: 'this is testing the back of a flashcard'
+    select('test deck',:from=> 'Deck')
+    click_button 'Create Flashcard'
+    current_path.should == flashcards_path
+    page.should have_content 'Flashcard created.'
+
+    @flashcard = Flashcard.find_by(Front: 'this is testing the front of a flashcard')
   end
 
   describe "GET /flashcards" do
    it "display some flashcards" do
-   	
+
+
    	visit flashcards_path
    	page.should have_content 'this is testing the front of a flashcard'
    	page.should have_content 'this is testing the back of a flashcard'

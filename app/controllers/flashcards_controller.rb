@@ -7,13 +7,13 @@ class FlashcardsController < ApplicationController
     if params[:deck_id] != nil
       @flashcards = @current_user.flashcards.where deck_id: params[:deck_id]
     else
-      @flashcards = @current_user.flashcards.all
+      @flashcards = @current_user.flashcards.to_a
     end
   end
 
   def create
   	Flashcard.create flashcard_params
-  	redirect_to :back
+  	redirect_to :back, notice: 'Flashcard created.'
   end
 
   def edit

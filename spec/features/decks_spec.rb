@@ -3,25 +3,46 @@ require 'spec_helper'
 describe "Decks" do
   
   before do
-  	@deck = Deck.create name: 'deck name test'
+    # Register a new user to be used during the testing process
+    visit signup_path
+    fill_in 'Email', with: 'testuser'
+    fill_in 'Password', with: 'testpass'
+    fill_in 'Password confirmation', with: 'testpass'
+    click_button 'Create User'
+    current_path.should == root_path
+    page.should have_content 'Thank you for signing up!'
+
+    #login
+    visit login_path
+    fill_in 'Email', with: 'testuser'
+    fill_in 'Password', with: 'testpass'
+    click_button 'Log In'
+
+    # Create a deck
+    visit decks_path
+    fill_in 'Name', with: 'test deck'
+    click_button 'Create Deck'
+    current_path.should == decks_path
+    page.should have_content 'Deck created.'
+
+    @deck = Deck.find_by(name: 'test deck')
+
   end
 
   describe "GET /decks" do
    it "display decks" do
    	
    	visit decks_path
-   	page.should have_content 'deck name test'
+   	page.should have_content 'test deck'
    end
 
    it "creates a new deck" do
    	visit decks_path
    	fill_in 'Name', with: 'testing creation of a new deck'
-
    	click_button 'Create Deck'
 
-	current_path.should == decks_path
-
-	page.should have_content 'testing creation of a new deck'
+    current_path.should == decks_path
+    page.should have_content 'testing creation of a new deck'
    end
   end
 
@@ -32,19 +53,18 @@ describe "Decks" do
 
   		current_path == edit_deck_path(@deck)
 
-  		find_field('Name').value.should == 'deck name test'
+  		find_field('Name').value.should == 'test deck'
 
   		fill_in 'Name', with: 'testing updating deck'
 
   		click_button 'Update Deck'
 
-		current_path.should == decks_path
-
+      current_path.should == decks_path
   		page.should have_content 'testing updating deck'
   	end
   	it "should not update if name of deck is empty" do
   		visit decks_path
-  		click_link 'Edit'
+  		find("#deck_#{@deck.id}").click_link 'Edit'
 
   		fill_in 'Name', with: ''
 

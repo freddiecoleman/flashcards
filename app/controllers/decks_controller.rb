@@ -3,12 +3,12 @@ class DecksController < ApplicationController
   
   def index
   	@deck = Deck.new
-  	@decks = @current_user.decks.all
+  	@decks = @current_user.decks.to_a
   end
 
   def create
   	@current_user.decks.create deck_params
-  	redirect_to :back
+  	redirect_to :back, notice: 'Deck created.'
   end
 
   def edit
