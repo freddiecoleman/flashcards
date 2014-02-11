@@ -35,10 +35,11 @@ describe "users" do
           visit logout_path
           sign_in
         end
+
         it { should have_content 'Logged in!' }
         it { should have_link('Logout') }
-        #CURRENT ISSUES IS THAT THIS WORK FOR 'Login' AND 'Logout' SO I SHOULD WORK OUT WHY???
       end
+      
     end
   end
 end
