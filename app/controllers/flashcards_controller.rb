@@ -12,8 +12,12 @@ class FlashcardsController < ApplicationController
   end
 
   def create
-  	Flashcard.create flashcard_params
-  	redirect_to :back, notice: 'Flashcard created.'
+    if flashcard_params[:front].present? && flashcard_params[:back].present?
+      Flashcard.create flashcard_params
+      redirect_to :back, notice: 'Flashcard created.'
+    else
+      redirect_to :back, notice: 'Error: Flashcard must have a front and back.'
+    end
   end
 
   def edit

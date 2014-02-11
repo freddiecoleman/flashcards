@@ -3,61 +3,48 @@ require 'spec_helper'
 describe "Flashcards" do
 
   before do
-    # Register a new user to be used during the testing process
-    visit signup_path
-    fill_in 'Email', with: 'testuser'
-    fill_in 'Password', with: 'testpass'
-    fill_in 'Password confirmation', with: 'testpass'
-    click_button 'Create User'
-    current_path.should == root_path
-    page.should have_content 'Thank you for signing up!'
-
-    #login
-    visit login_path
-    fill_in 'Email', with: 'testuser'
-    fill_in 'Password', with: 'testpass'
-    click_button 'Log In'
-
-    # Create a deck
-    visit decks_path
-    fill_in 'Name', with: 'test deck'
-    click_button 'Create Deck'
-    current_path.should == decks_path
-    page.should have_content 'Deck created.'
-
-    # Create a flashcard
-    visit flashcards_path
-    fill_in 'Front', with: 'this is testing the front of a flashcard'
-    fill_in 'Back', with: 'this is testing the back of a flashcard'
-    select('test deck',:from=> 'Deck')
-    click_button 'Create Flashcard'
-    current_path.should == flashcards_path
-    page.should have_content 'Flashcard created.'
-
+    register
+    create_deck
+    create_flashcard
     @deck = Deck.find_by(name: 'test deck')
     @flashcard = Flashcard.find_by(Front: 'this is testing the front of a flashcard')
   end
 
-  describe "GET /flashcards" do
+  describe "displaying flashcards" do
    it "display some flashcards" do
-
    	visit flashcards_path
    	page.should have_content 'this is testing the front of a flashcard'
    	page.should have_content 'this is testing the back of a flashcard'
    end
+  end
 
-   it "creates a new flashcard" do
-   	visit flashcards_path
-   	fill_in 'Front', with: 'testing creation of a flashcard front'
-   	fill_in 'Back', with: 'testing creation of a flashcard back'
+  describe "flashcard creation" do
+    before { visit flashcards_path }
 
-   	click_button 'Create Flashcard'
+    let(:submit) { "Create Flashcard" }
 
-	current_path.should == flashcards_path
+    describe "with invalid information" do
+      it "should generate an error message" do
+        click_button submit
+        page.should have_content 'Error: Flashcard must have a front and back.'
+      end
+      
+    end
 
-	page.should have_content 'testing creation of a flashcard front'
-	page.should have_content 'testing creation of a flashcard back'
-   end
+    describe "with valid information" do
+      it "creates a new flashcard" do
+
+        fill_in 'Front', with: 'testing front'
+        fill_in 'Back', with: 'testing back'
+
+        click_button submit
+
+        page.should have_content 'Flashcard created.'
+        page.should have_content 'testing front'
+        page.should have_content 'testing back'
+       end
+    end
+   
   end
 
   describe "PUT /flashcards" do
