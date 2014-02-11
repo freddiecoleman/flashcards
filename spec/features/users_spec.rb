@@ -16,7 +16,7 @@ describe "users" do
 
   describe "user login" do
     it "should log in" do
-      #login
+      # log in
       visit login_path
       fill_in 'Email', with: 'testuser'
       fill_in 'Password', with: 'testpass'
