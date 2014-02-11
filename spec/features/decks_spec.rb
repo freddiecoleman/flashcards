@@ -77,14 +77,15 @@ describe "Decks" do
   end
 
   describe "DELETE /decks" do
-  	it "should delete a deck" do
+  	it "should delete a deck and all nested flashcards" do
   		visit decks_path
   		find("#deck_#{@deck.id}").click_link 'Delete'
   		page.should have_content 'Deck has been deleted.'
   		page.should have_no_content 'deck name test'
+      
       visit flashcards_path
+      page.should have_no_content 'test deck'
   	end
-    # need a test for clicking flashcards button to see if it goes to a page that only shows flashcards in that deck
-    # need a test for testing if flashcards are deleted along with the deck
+
   end
 end

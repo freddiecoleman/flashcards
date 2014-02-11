@@ -34,12 +34,12 @@ describe "Flashcards" do
     current_path.should == flashcards_path
     page.should have_content 'Flashcard created.'
 
+    @deck = Deck.find_by(name: 'test deck')
     @flashcard = Flashcard.find_by(Front: 'this is testing the front of a flashcard')
   end
 
   describe "GET /flashcards" do
    it "display some flashcards" do
-
 
    	visit flashcards_path
    	page.should have_content 'this is testing the front of a flashcard'
@@ -67,15 +67,16 @@ describe "Flashcards" do
 
   		current_path == edit_flashcard_path(@flashcard)
 
+      # check that we are editing the correct flashcard
   		find_field('Front').value.should == 'this is testing the front of a flashcard'
   		find_field('Back').value.should == 'this is testing the back of a flashcard'
 
+      # fill in the new values
   		fill_in 'Front', with: 'testing updating flashcard front'
   		fill_in 'Back', with: 'testing updating flashcard back'
-
   		click_button 'Update Flashcard'
 
-		current_path.should == flashcards_path
+		  current_path.should == flashcards_path
 
   		page.should have_content 'testing updating flashcard front'
   		page.should have_content 'testing updating flashcard back'
@@ -84,16 +85,16 @@ describe "Flashcards" do
   		visit flashcards_path
   		click_link 'Edit'
 
+      # add an invalid blank value to the front of the card
   		fill_in 'Front', with: ''
-
   		click_button 'Update Flashcard'
 
   		current_path.should == edit_flashcard_path(@flashcard)
 
   		page.should have_content 'There was an error updating your flashcard.'
 
+      # add an invalid blank value to the back of the card
   		fill_in 'Back', with: ''
-
   		click_button 'Update Flashcard'
 
   		current_path.should == edit_flashcard_path(@flashcard)
@@ -108,5 +109,13 @@ describe "Flashcards" do
   		page.should have_no_content 'this is testing the front of a flashcard'
   		page.should have_no_content 'this is testing the back of a flashcard'
   	end
+  end
+
+  describe "managing flashcards" do
+    it "should go to the page which shows flashcards from the correct deck" do
+      visit decks_path
+      find("#deck_#{@deck.id}").click_link 'Manage Flashcards'
+      current_path.should == deck_flashcards_path(@deck)
+    end
   end
 end
