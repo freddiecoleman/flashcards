@@ -12,7 +12,7 @@ describe "Flashcards" do
   end
 
   describe "displaying flashcards" do
-   it "display some flashcards" do
+   it "display flashcards" do
    	page.should have_content 'this is testing the front of a flashcard'
    	page.should have_content 'this is testing the back of a flashcard'
    end

@@ -7,8 +7,12 @@ class DecksController < ApplicationController
   end
 
   def create
-  	@current_user.decks.create deck_params
-  	redirect_to :back, notice: 'Deck created.'
+    if deck_params[:name].present?
+      @current_user.decks.create deck_params
+      redirect_to :back, notice: 'Deck created.'
+    else
+      redirect_to :back, notice: 'Error: Deck must have a name.'
+    end
   end
 
   def edit
