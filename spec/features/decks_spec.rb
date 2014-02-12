@@ -67,4 +67,12 @@ describe "Decks" do
   	end
 
   end
+
+  describe "clicking the link to manage flashcards in a deck" do
+    it "should go to the page which shows flashcards from the correct deck" do
+      visit decks_path
+      find("#deck_#{@deck.id}").click_link 'Manage Flashcards'
+      current_path.should == deck_flashcards_path(@deck)
+    end
+  end
 end
