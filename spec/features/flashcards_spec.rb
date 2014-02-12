@@ -96,7 +96,7 @@ describe "Flashcards" do
     it "should display a success message" do
       page.should have_content 'Flashcard has been deleted.'
     end
-  	it "should delete a flashcard" do
+  	it "should delete the flashcard" do
   		page.should have_no_content 'this is testing the front of a flashcard'
   		page.should have_no_content 'this is testing the back of a flashcard'
   	end
