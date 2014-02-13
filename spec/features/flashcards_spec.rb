@@ -2,6 +2,13 @@ require 'spec_helper'
 
 describe "Flashcards" do
 
+  front_test = 'this is testing the front of a flashcard'
+  back_test = 'this is testing the back of a flashcard'
+  create_front = 'testing creation front'
+  create_back = 'testing creation back'
+  update_front = 'testing updating flashcard front'
+  update_back = 'testing updating flashcard back'
+
   before do
     register
     create_deck
@@ -13,8 +20,8 @@ describe "Flashcards" do
 
   describe "displaying flashcards" do
    it "display flashcards" do
-   	page.should have_content 'this is testing the front of a flashcard'
-   	page.should have_content 'this is testing the back of a flashcard'
+   	page.should have_content front_test
+   	page.should have_content back_test
    end
   end
 
@@ -32,8 +39,8 @@ describe "Flashcards" do
 
     describe "with valid information" do
       before do
-        fill_in 'Front', with: 'testing front'
-        fill_in 'Back', with: 'testing back'
+        fill_in 'Front', with: create_front
+        fill_in 'Back', with: create_back
         select('test deck',:from=> 'Deck')
       end
 
@@ -47,8 +54,8 @@ describe "Flashcards" do
           page.should have_content 'Flashcard created.'
         end
         it "Should display the new flashcard" do
-          page.should have_content 'testing front'
-          page.should have_content 'testing back'
+          page.should have_content create_front
+          page.should have_content create_back
           page.should have_content 'test deck'
         end
       end
@@ -56,18 +63,21 @@ describe "Flashcards" do
   end
 
   describe "editing a flashcard" do
+
+    let(:submit) { "Update Flashcard" }
+
     before { find("#flashcard_#{@flashcard.id}").click_link 'Edit' }
 
     it "should be the correct flashcard" do
-      find_field('Front').value.should == 'this is testing the front of a flashcard'
-      find_field('Back').value.should == 'this is testing the back of a flashcard'
+      find_field('Front').value.should == front_test
+      find_field('Back').value.should == back_test
     end
 
     describe "with invalid information" do
       before do
         fill_in 'Front', with: ''
         fill_in 'Back', with: ''
-        click_button 'Update Flashcard'
+        click_button submit
       end
       it "should display an error message" do
         page.should have_content 'There was an error updating your flashcard.'
@@ -76,16 +86,16 @@ describe "Flashcards" do
 
     describe "with valid information" do
       before do
-        fill_in 'Front', with: 'testing updating flashcard front'
-        fill_in 'Back', with: 'testing updating flashcard back'
-        click_button 'Update Flashcard'
+        fill_in 'Front', with: update_front
+        fill_in 'Back', with: update_back
+        click_button submit
       end
       it "should display a success message" do
         page.should have_content 'Your flashcard has successfully been updated.'
       end
     	it "should edit the flashcard" do
-    		page.should have_content 'testing updating flashcard front'
-    		page.should have_content 'testing updating flashcard back'
+    		page.should have_content update_front
+    		page.should have_content update_back
     	end
     end
   	
@@ -97,8 +107,8 @@ describe "Flashcards" do
       page.should have_content 'Flashcard has been deleted.'
     end
   	it "should delete the flashcard" do
-  		page.should have_no_content 'this is testing the front of a flashcard'
-  		page.should have_no_content 'this is testing the back of a flashcard'
+  		page.should have_no_content front_test
+  		page.should have_no_content back_test
   	end
   end
 end
