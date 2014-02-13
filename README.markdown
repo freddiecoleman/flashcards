@@ -20,7 +20,3 @@ Back-end:
 Testing:
 * RSpec
 * Capybara
-
-Tools:
-* Sublime Text 2 (best text editor ever!!!)
-* Growl notify
