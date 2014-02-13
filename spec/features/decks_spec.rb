@@ -1,16 +1,21 @@
 require 'spec_helper'
 
 describe "Decks" do
+
+  name_test = 'test deck'
+  create_name = 'testing creation of a new deck'
+  update_name = 'testing updating deck'
+
   before do
     register
     create_deck
-    @deck = Deck.find_by(name: 'test deck')
+    @deck = Deck.find_by(name: name_test)
     visit decks_path
   end
 
   describe "displaying decks" do
    it "display decks" do
-    page.should have_content 'test deck'
+    page.should have_content name_test
    end
   end
 
@@ -27,7 +32,7 @@ describe "Decks" do
 
     describe "with valid information" do
       before do
-        fill_in 'Name', with: 'testing creation of a new deck'
+        fill_in 'Name', with: create_name
       end
 
       it "should create a deck" do
@@ -40,23 +45,26 @@ describe "Decks" do
           page.should have_content 'Deck created.'
         end
         it "Should display the new deck" do
-          page.should have_content 'testing creation of a new deck'
+          page.should have_content create_name
         end
       end
     end
   end
 
   describe "editing a deck" do
+
+    let(:submit) { "Update Deck" }
+
     before { find("#deck_#{@deck.id}").click_link 'Edit' }
 
     it "should be the correct deck" do
-      find_field('Name').value.should == 'test deck'
+      find_field('Name').value.should == name_test
     end
 
     describe "with invalid information" do
       before do
         fill_in 'Name', with: ''
-        click_button 'Update Deck'
+        click_button submit
       end
       it "should display an error message" do
         page.should have_content 'There was an error updating your deck.'
@@ -65,14 +73,14 @@ describe "Decks" do
 
     describe "with valid information" do
       before do
-        fill_in 'Name', with: 'testing updating deck'
-        click_button 'Update Deck'
+        fill_in 'Name', with: update_name
+        click_button submit
       end
       it "should display a success message" do
         page.should have_content 'Your deck has successfully been updated.'
       end
       it "should edit the deck" do
-        page.should have_content 'testing updating deck'
+        page.should have_content update_name
       end
     end
  end
@@ -85,7 +93,7 @@ describe "Decks" do
   end
 
   it "should delete the deck" do
-    page.should have_no_content 'test deck'
+    page.should have_no_content name_test
   end
  end
 
