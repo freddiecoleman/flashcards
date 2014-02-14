@@ -37,6 +37,10 @@ class DecksController < ApplicationController
     end
   end
 
+  def show
+    redirect_to decks_path, notice: "You need to select a deck to review."
+  end
+
   def deck_params
     params.require(:deck).permit(:name)
   end

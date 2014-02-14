@@ -2,13 +2,13 @@ class ReviewController < ApplicationController
 	before_filter :authorise
 	def index
 		if params[:deck_id] != nil
-	      if !@flashcard = @current_user.flashcards.where("due <= ? AND deck_id = ?", Time.now, params[:deck_id]).order(:last_review).first
-	      	redirect_to decks_path, notice: "No cards in this deck are ready for review."
-	      end
-	    else
-	      redirect_to decks_path, notice: "You need to select a deck to review."
-	    end
-	end
+      if !@flashcard = @current_user.flashcards.where("due <= ? AND deck_id = ?", Time.now, params[:deck_id]).order(:last_review).first
+        redirect_to decks_path, notice: "No cards in this deck are ready for review."
+      end
+    else
+      redirect_to decks_path, notice: "You need to select a deck to review."
+    end
+  end
 
 	#when review a card need to make the new due date = today + the NEW interval.
 	# then add the new interval and easiness to the db as well
