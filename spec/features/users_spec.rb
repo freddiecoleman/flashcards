@@ -28,18 +28,24 @@ describe "users" do
         before { click_button submit }
         it { should have_content 'Thank you for signing up!' }
       end
-
-      describe "after registration signout and login" do
-        before do
-          click_button submit
-          visit logout_path
-          sign_in
-        end
-
-        it { should have_content 'Logged in!' }
-        it { should have_link('Logout') }
-      end
       
+    end
+  end
+
+  describe "user login" do
+    describe "with invalid login details" do
+      it "should display error message" do
+
+      end
+      it "should not log in" do
+
+
+      end
+    end
+    describe "with valid login details" do
+      before { register }
+      it { should have_content 'Thank you for signing up!' }
+      it { should have_link('Logout') }
     end
   end
 end
