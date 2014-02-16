@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       end
   		redirect_to root_url, notice: "Logged in!"
   	else
-  		redirect_to login_path, notice: "Email or password is invalid"
+  		redirect_to login_path, notice: "Email or password is invalid."
   	end
   end
 

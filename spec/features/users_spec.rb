@@ -34,13 +34,12 @@ describe "users" do
 
   describe "user login" do
     describe "with invalid login details" do
-      it "should display error message" do
-
+      before do
+        visit login_path
+        click_button 'Log In'
       end
-      it "should not log in" do
-
-
-      end
+      it { should have_content 'Email or password is invalid.' }
+      it { should have_link('Login') }
     end
     describe "with valid login details" do
       before { register }
