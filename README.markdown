@@ -20,3 +20,4 @@ Back-end:
 Testing:
 * RSpec
 * Capybara
+* Guard
