@@ -6,6 +6,8 @@ The underlying algorithm is based on research into the pshychology of memory. Th
 
 Potential use cases include language learning, memorisation of abbreviations or technical terms, exam practice, and much more.
 
+To allow the user to monitor their progress statistics are logged and the data can be visualised on the stats page.
+
 ## Technologies used
 
 Front-end:
