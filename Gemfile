@@ -12,8 +12,10 @@ gem 'sass-rails', '~> 4.0.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
+# Mobile first front-end framework
 gem 'foundation-rails'
 
+# Javascript chart library
 gem 'lazy_high_charts'
 
 # Use CoffeeScript for .js.coffee assets and views
