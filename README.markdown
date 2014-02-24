@@ -25,3 +25,6 @@ Testing:
 * RSpec
 * Capybara
 * Guard
+
+Utilities:
+* Growl notify
