@@ -25,6 +25,7 @@ Testing:
 * RSpec
 * Capybara
 * Guard
+* Launchy
 
 Utilities:
 * Growl notify
