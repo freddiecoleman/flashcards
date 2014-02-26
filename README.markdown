@@ -6,7 +6,7 @@ The underlying algorithm, which is based on a modified version of the SM2 algori
 
 Potential use cases include language learning, memorisation of abbreviations or technical terms, exam practice, and much more.
 
-Statistics are logged to allow the user to monitor their progress. The data can be visualised with various charts on the stats page.
+Statistics are logged to allow the user to monitor their progress. The data can be visualised with various charts on the stats page that are generated using Highcharts.
 
 ## Technologies used
 
