@@ -18,7 +18,7 @@ Front-end:
 
 Back-end:
 * Ruby on Rails
-* SQLite3
+* SQLite3 (plans to replace with MongoDB at a later date)
 * SM2 algorithm implemented in Ruby
 
 Testing:
