@@ -4,7 +4,7 @@ This is a spaced repetition flashcard system built using Ruby on Rails. The fron
 
 The underlying algorithm, which is based on a modified version of the SM2 algorithm, is built using principles obtained from research into the pshychology of memory. The result is an application that can assist the user with memorisation of large amounts of information with very little time investment.
 
-Potential use cases include language learning, memorisation of abbreviations or technical terms, exam practice, and much more.
+Use cases include language learning, memorisation of abbreviations or technical terms, exam practice, and much more.
 
 Statistics are logged to allow the user to monitor their progress. The data can be visualised with various charts on the stats page that are generated using Highcharts.
 
