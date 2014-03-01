@@ -8,24 +8,22 @@ Use cases include language learning, memorisation of abbreviations or technical 
 
 Statistics are logged to allow the user to monitor their progress. The data can be visualised with various charts on the stats page that are generated using Highcharts.
 
-## Technologies used
-
-Front-end:
+## Front-end
 * Foundation 5
 * SCSS
 * jQuery
 * Highcharts
 
-Back-end:
+## Back-end
 * Ruby on Rails
 * SQLite3 (plans to replace with MongoDB at a later date)
 * SM2 algorithm implemented in Ruby
 
-Testing:
+## Testing
 * RSpec
 * Capybara
 * Guard
 * Launchy
 
-Utilities:
+## Utilities
 * Growl notify
