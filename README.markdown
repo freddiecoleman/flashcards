@@ -27,3 +27,5 @@ Statistics are logged to allow the user to monitor their progress. The data can 
 
 ## Utilities
 * Growl notify
+
+Built by Freddie Coleman
