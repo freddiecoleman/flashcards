@@ -8,7 +8,7 @@ Use cases include language learning, memorisation of abbreviations or technical 
 
 Statistics are logged to allow the user to monitor their progress. The data can be visualised with various charts on the stats page that are generated using Highcharts.
 
-More features coming soon. Watch this space.
+More features coming soon. Watch this space...
 
 ## Front-end
 * Foundation 5
