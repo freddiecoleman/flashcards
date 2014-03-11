@@ -1,4 +1,4 @@
-#Spaced Repetition Flashcard System
+#Spaced Repetition Flashcard System in Ruby on Rails
 
 This is a spaced repetition flashcard system built using the Ruby on Rails framework. The front-end is designed to work on mobile devices as well as in the web browser on a desktop computer.
 
