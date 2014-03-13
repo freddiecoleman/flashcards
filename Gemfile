@@ -37,6 +37,7 @@ end
 
 group :development do
   gem "rails-erd"
+  gem "railroady"
 end
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
