@@ -18,6 +18,9 @@ describe "review" do
       page.should have_content @flashcard.front
       page.should have_content @flashcard.back
     end
+    it "logs review into stats table" do
+      expect { click_button "Hard" }.to change(ReviewLog, :count).by(1)
+    end
   end
 
   describe "without deck id" do

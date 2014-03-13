@@ -15,7 +15,7 @@ class ReviewController < ApplicationController
 	# dont need to do anything with the old interval as that is only used on input
 
 	def update
-		@flashcard = Flashcard.find(params[:id])#WARNING CURRENT SECURITY RISK OTHER USERS COULD RESPOND TO OTHER PEOPLES CARDS FIX LATER
+		@flashcard = Flashcard.find(params[:id])
 		if params[:response] == "Again"
 			response = 0
 		elsif params[:response] == "Hard"
@@ -29,6 +29,9 @@ class ReviewController < ApplicationController
 		sm2 = SpacedRepetition::Sm2.new(response, @flashcard.interval, @flashcard.ease_factor)
 		@flashcard.update_attributes interval: sm2.interval, ease_factor: sm2.easiness_factor, due: Time.now+sm2.interval.days, last_review: Time.now
 		redirect_to deck_review_index_path(params[:deck_id])
+
+    # log the review in the review logs
+    ReviewLog.create(:user_id => params[:id], :score => response, :deck_id => params[:deck_id], :date => Time.now)
 	end
 
 	def show
