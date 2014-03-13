@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
 	before_create { generate_token(:auth_token) }
 	has_many :decks, dependent: :destroy
 	has_many :flashcards, through: :decks
+  has_many :review_logs, through: :decks
 
 	def generate_token(column)
 		begin
