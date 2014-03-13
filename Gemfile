@@ -35,6 +35,10 @@ group :test, :development do
 	gem 'launchy'
 end
 
+group :development do
+  gem "rails-erd"
+end
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 #gem 'turbolinks'
 
