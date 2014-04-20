@@ -1,8 +1,10 @@
 Flashcards::Application.routes.draw do
+  get "tutorial/index"
   root to: 'welcome#index'
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
+  get 'tutorial', to: 'tutorial#index', as: 'tutorial'
 
   resources :users, :sessions, :password_resets
   resources :decks, :flashcards, :review

@@ -18,4 +18,12 @@
 //= require highcharts/highcharts-more                                                         
 //= require highcharts/highstock
 
-$(function(){ $(document).foundation(); });
+$(function(){ $(document).foundation();
+if ($('[data-joyride]')) {
+$(document).foundation('joyride', 'start');
+} });
+
+$(document).foundation();
+if ($('[data-joyride]')) {
+$(document).foundation('joyride', 'start');
+}
