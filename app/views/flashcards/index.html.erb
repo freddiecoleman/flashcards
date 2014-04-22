@@ -5,7 +5,6 @@
 		<table width="100%">
 			<thead>
 				<tr>
-					<th>ID</th>
 					<th>Deck</th>
 					<th>Front</th>
 					<th>Back</th>
@@ -15,7 +14,6 @@
 			</thead>
 			<% for flashcard in @flashcards %>
 			<tr id="flashcard_<%= flashcard.id %>">
-				<td><%= flashcard.id %></td>
 				<td><%= flashcard.deck.name %></td>
 				<td><%= flashcard.front %></td>
 				<td><%= flashcard.back %></td>
