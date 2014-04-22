@@ -31,6 +31,21 @@
       </div>
 
       <div class="large-12 columns">
+        <div class="row">
+            <div class="large-12 columns">
+              <ul class="vcard">
+                <li>Total flashcards: <%= current_user.flashcards.count %></li>
+                <li>Total reviews <%= current_user.review_logs.count %></li>
+                <li>New cards: <%= current_user.flashcards.where("interval < 1").count %></li>
+                <li>Due: </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+
+      <div class="large-12 columns">
         <table width="100%">
           <thead>
             <tr>
