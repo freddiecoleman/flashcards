@@ -20,7 +20,28 @@
       <!-- Content -->
 
       <% if current_user %>
+      <div class="large-12 columns">
+        <div class="row">
+            <div class="large-12 columns">
+              <div data-alert class="alert-box secondary">
+                You are logged in as <%= current_user.email %>
+              </div>
+            </div>
+          </div>
+      </div>
 
+      <% for deck in @decks %>
+      <tr id="deck_<%= deck.id %>">
+        <td><%= deck.name %></td>
+        <td><%= deck.flashcards.count %></td>
+        <td><%= link_to 'Review Deck', deck_review_index_path(deck), class: "button tiny secondary" %> <%= link_to 'Manage Flashcards', deck_flashcards_path(deck), class: "button tiny secondary" %></td>
+        <td>
+          <%= link_to 'Edit', edit_deck_path(deck), class: "button success tiny" %> 
+          <%= link_to 'Delete', deck, class: "button tiny alert", method: :delete, remote: true %>
+        </td>
+      </tr>
+      <% end %>
+      
       <% else %>
 
       <div class="large-8 columns">
