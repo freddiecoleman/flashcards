@@ -1,101 +1,103 @@
 <div class="row">
   <div class="large-12 columns">
-    <!-- Desktop Slider -->
-
-    <div class="hide-for-small">
-      <div id="featured"><%= image_tag "head-img.png" %></div>
-    </div><!-- End Desktop Slider -->
-    <!-- Mobile Header -->
-
-    <div class="row">
-      <div class="small-12 show-for-small"><br>
-      <img src="http://placehold.it/1000x600&amp;text=For%20Small%20Screens"></div>
-    </div><!-- End Mobile Header -->
-  </div>
-</div><br>
-
-<div class="row">
-  <div class="large-12 columns">
     <div class="row">
       <!-- Content -->
 
       <% if current_user %>
-      <div class="large-12 columns">
-        <div class="row">
-            <div class="large-12 columns">
-              <div data-alert class="alert-box secondary">
-                You are logged in as <%= current_user.email %>
+
+        <div class="large-12 columns">
+          <div class="row">
+              <div class="large-12 columns">
+                <div data-alert class="alert-box secondary">
+                  You are logged in as <%= current_user.email %>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="large-12 columns">
+          <div class="row">
+              <div class="large-12 columns">
+                <ul class="vcard">
+                  <li>Total flashcards: <%= current_user.flashcards.count %></li>
+                  <li>Total reviews <%= current_user.review_logs.count %></li>
+                  <li>New cards: <%= current_user.flashcards.where("interval < 1").count %></li>
+                </ul>
               </div>
             </div>
           </div>
-      </div>
 
-      <div class="large-12 columns">
-        <div class="row">
-            <div class="large-12 columns">
-              <ul class="vcard">
-                <li>Total flashcards: <%= current_user.flashcards.count %></li>
-                <li>Total reviews <%= current_user.review_logs.count %></li>
-                <li>New cards: <%= current_user.flashcards.where("interval < 1").count %></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-
-
-      <div class="large-12 columns">
-        <table width="100%">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Card count</th>
-              <th>Action</th>
+        <div class="large-12 columns">
+          <table width="100%">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Card count</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <% for deck in @decks %>
+            <tr id="deck_<%= deck.id %>">
+              <td><%= deck.name %></td>
+              <td><%= deck.flashcards.count %></td>
+              <td><%= link_to 'Review Deck', deck_review_index_path(deck), class: "button tiny secondary" %> <%= link_to 'Manage Flashcards', deck_flashcards_path(deck), class: "button tiny secondary" %></td>
             </tr>
-          </thead>
-          <% for deck in @decks %>
-          <tr id="deck_<%= deck.id %>">
-            <td><%= deck.name %></td>
-            <td><%= deck.flashcards.count %></td>
-            <td><%= link_to 'Review Deck', deck_review_index_path(deck), class: "button tiny secondary" %> <%= link_to 'Manage Flashcards', deck_flashcards_path(deck), class: "button tiny secondary" %></td>
-          </tr>
-          <% end %>
-        </table>
-      </div>
+            <% end %>
+          </table>
+        </div>
 
       <% else %>
 
-      <div class="large-8 columns">
-        <div class="panel radius">
-          <div class="row">
-            <div class="large-11 small-11 columns">
-              <h4>Welcome to myFlashcards</h4>
-              <hr>
+        <div class="large-12 medium-12 columns">
+          <ul class="example-orbit" data-orbit>
+            <li>
+              <img src="../assets/virtual-flashcard-system.jpg" alt="slide 1" />
+              <div class="orbit-caption">
+                Virtual flashcard system for language learning.
+              </div>
+            </li>
+            <li class="active">
+              <img src="../assets/spacing.jpg" alt="slide 2" />
+              <div class="orbit-caption">
+                Reduce the amount of time spent revising words that you already know.
+              </div>
+            </li>
+            <li>
+              <img src="../assets/launch-orbit.jpg" alt="slide 3" />
+              <div class="orbit-caption">
+                Learn more in a shorter amount of time.
+              </div>
+            </li>
+          </ul>
+        </div>
 
-              <h5 class="subheader">This website provides a virtual flashcard system which helps you to learn vocabulary and grammar by prioritising your revision sessions so that you are only reviewing the information that you are likely to forget soon.</h5>
-
-              <h5 class="subheader">You need to register an account in order to use the site.</h5>
+        <div class="large-8 columns">
+          
+            <div class="row">
+              <div class="large-11 small-11 columns">
+                <h4>About myFlashcards</h4>
+                <hr>
+                <p>This virtual flashcard system reviews your progress and predicts which words you find most difficult so that you spend your time learning new words and don't waste time reviewing the words that you already know.</p>
+                <p>You need to <%= link_to "register", signup_path %> an account in order to use this site.</p>
+              </div>
             </div>
 
-            
-          </div>
         </div>
-      </div>
 
-      <div class="large-4 columns hide-for-small">
-        <h4>Help</h4>
-        <hr>
-        <a href="#">
-        <div class="panel radius callout" style="text-align: center">
-          <strong>Tutorial</strong>
-        </div></a> <a href="#">
-        <div class="panel radius callout" style="text-align: center">
-          <strong>Frequently Asked Questions</strong>
-        </div></a> <a href="#">
-        <div class="panel radius callout" style="text-align: center">
-          <strong>Contact Us</strong>
-        </div></a>
-      </div><!-- End Content -->
+        <div class="large-4 columns hide-for-small">
+          <h4>Help</h4>
+          <hr>
+          <a href="#">
+          <div class="panel radius callout" style="text-align: center">
+            <strong>Tutorial</strong>
+          </div></a> <a href="#">
+          <div class="panel radius callout" style="text-align: center">
+            <strong>Frequently Asked Questions</strong>
+          </div></a> <a href="#">
+          <div class="panel radius callout" style="text-align: center">
+            <strong>Contact Us</strong>
+          </div></a>
+        </div><!-- End Content -->
 
       <% end %>
 
