@@ -16,4 +16,5 @@
 /tmp
 /.DS_Store
 /spec/features/.DS_Store
-spec/features/.DS_Store
+/spec/features/.DS_Store
+/app/assets/images/tutorial.mp4
