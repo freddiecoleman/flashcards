@@ -82,5 +82,21 @@
     </div>
 
     <%= javascript_include_tag "application" %>
+    <script>
+
+ 
+ 
+ 
+
+// using jQuery
+$('video,audio').mediaelementplayer({
+        // automatically create these translations on load
+        translations:['es','ar','yi','zh-cn'],
+        // allow the user to add additional translations
+        translationSelector: true,
+        // start with English automatically turned on
+        startLanguage: 'en'
+    });
+</script>
   </body>
 </html>

@@ -1,0 +1,99 @@
+﻿0
+00:00:00,000 --> 00:00:05,000
+Hello and welcome to the myFlashcards Virtual Flashcard System tutorial.
+
+2
+00:00:05,000 --> 00:00:07,000
+Today I am going to be showing you how to use the MyFlashcards
+
+4
+00:00:07,000 --> 00:00:09,000
+Virtual Flashcard System.
+
+5
+00:00:09,000 --> 00:00:11,000
+The first thing that we need to do is register an account
+
+7
+00:00:12,000 --> 00:00:14,000
+and the way we do this is that we go to the top right
+
+8
+00:00:14,000 --> 00:00:17,000
+hand corner of the screen and click the register button.
+
+10
+00:00:17,000 --> 00:00:20,000
+From here we need to enter our registration details
+
+11
+00:00:20,000 --> 00:00:22,000
+which is very simple; it's just an email and a password.
+
+12
+00:00:22,000 --> 00:00:24,000
+You also need to do a password confirmation to make sure
+
+13
+00:00:24,000 --> 00:00:26,000
+you spelt the password correctly.
+
+14
+00:00:26,000 --> 00:00:30,000
+Once you have done that you need to click on the create user button.
+
+15
+00:00:30,000 --> 00:00:34,000
+This will create an account and log you in to the front page.
+
+16
+00:00:35,000 --> 00:00:38,000
+As you can see it says you are logged in as demo@demo.com
+
+17
+00:00:38,000 --> 00:00:40,000
+which is the email address that we specified when we registered.
+
+18
+00:00:41,000 --> 00:00:44,000
+Here are the statistics and at the moment we have no flashcards
+
+19
+00:00:44,000 --> 00:00:48,000
+no reviews, and no new cards, which is to be expected as this is a new account.
+
+20
+00:00:48,000 --> 00:00:52,000
+If you look here it also says that we have no decks created.
+
+21
+00:00:52,000 --> 00:00:56,000
+The next thing we need to do is to create our first deck.
+
+22
+00:00:57,000 --> 00:01:01,000
+this is done by going to the top of the screen and clicking on the manage decks button.
+
+23
+00:01:01,000 --> 00:01:04,000
+From this screen we can create our first deck.
+
+24
+00:01:05,000 --> 00:01:09,000
+This is done by typing in the name of the deck in the text field at the top of the screen.
+
+25
+00:01:09,000 --> 00:01:12,000
+I'm going to call this deck 'Japanese'.
+
+26
+00:01:12,000 --> 00:01:15,000
+Once you have done that you need to click on the create deck button.
+
+27
+00:01:15,000 --> 00:01:18,000
+As you can see, once that is done a message appears at the top of the screen that says
+
+28
+00:01:18,000 --> 00:01:24,000
+that the deck has been created. We can also see the deck listed in the table below.

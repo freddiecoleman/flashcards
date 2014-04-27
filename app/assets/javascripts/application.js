@@ -17,6 +17,7 @@
 //= require highcharts/highcharts                                                           
 //= require highcharts/highcharts-more                                                         
 //= require highcharts/highstock
+//= require mediaelement_rails
 
 $(function(){ $(document).foundation();
 if ($('[data-joyride]')) {
