@@ -36,6 +36,9 @@
                 <th>Action</th>
               </tr>
             </thead>
+            <% if @decks.count < 1 %>
+            <tr><td colspan="3">No decks created.</td></tr>
+            <% end %>
             <% for deck in @decks %>
             <tr id="deck_<%= deck.id %>">
               <td><%= deck.name %></td>
@@ -49,7 +52,7 @@
       <% else %>
 
         <div class="large-12 medium-12 columns">
-          <ul class="example-orbit" data-orbit>
+          <ul class="topslider" data-orbit>
             <li>
               <img src="../assets/virtual-flashcard-system.jpg" alt="slide 1" />
               <div class="orbit-caption">
@@ -63,7 +66,7 @@
               </div>
             </li>
             <li>
-              <img src="../assets/launch-orbit.jpg" alt="slide 3" />
+              <img src="../assets/spacing.jpg" alt="slide 3" />
               <div class="orbit-caption">
                 Learn more in a shorter amount of time.
               </div>

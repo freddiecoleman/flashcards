@@ -11,6 +11,11 @@
 					<th>Tools</th>
 				</tr>
 			</thead>
+
+      <% if @decks.count < 1 %>
+      <tr><td colspan="4">No decks created.</td></tr>
+      <% end %>
+
 			<% for deck in @decks %>
 			<tr id="deck_<%= deck.id %>">
 				<td><%= deck.name %></td>

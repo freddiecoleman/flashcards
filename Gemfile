@@ -27,6 +27,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+gem 'mediaelement_rails'
+
 group :test, :development do
 	gem 'rspec-rails'
 	gem 'capybara'

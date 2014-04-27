@@ -12,6 +12,11 @@
 					<th>Tools</th>
 				</tr>
 			</thead>
+
+      <% if @flashcards.count < 1 %>
+      <tr><td colspan="3">No flashcards created.</td></tr>
+      <% end %>
+
 			<% for flashcard in @flashcards %>
 			<tr id="flashcard_<%= flashcard.id %>">
 				<td><%= flashcard.deck.name %></td>
