@@ -3,7 +3,7 @@
 <%= form_tag sessions_path do %>
 	<div class="field">
 		<%= label_tag :email %><br />
-		<%= text_field_tag :email, params[:email] %>
+		<%= email_field_tag :email, params[:email], placeholder: 'user@domain.com', required: true %>
 	</div>
 	<div class="field">
 		<%= label_tag :password %><br />
