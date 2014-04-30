@@ -2,39 +2,39 @@
 00:00:00,000 --> 00:00:05,000
 Hello and welcome to the myFlashcards Virtual Flashcard System tutorial.
 
-2
+1
 00:00:05,000 --> 00:00:07,000
 Today I am going to be showing you how to use the MyFlashcards
 
-4
+2
 00:00:07,000 --> 00:00:09,000
 Virtual Flashcard System.
 
-5
+3
 00:00:09,000 --> 00:00:11,000
 The first thing that we need to do is register an account
 
-7
+4
 00:00:12,000 --> 00:00:14,000
 and the way we do this is that we go to the top right
 
-8
+5
 00:00:14,000 --> 00:00:17,000
 hand corner of the screen and click the register button.
 
-10
+6
 00:00:17,000 --> 00:00:20,000
 From here we need to enter our registration details
 
-11
+7
 00:00:20,000 --> 00:00:22,000
 which is very simple; it's just an email and a password.
 
-12
+8
 00:00:22,000 --> 00:00:24,000
 You also need to do a password confirmation to make sure
 
-13
+9
 00:00:24,000 --> 00:00:26,000
 you spelt the password correctly.
 
