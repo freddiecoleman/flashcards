@@ -97,3 +97,228 @@ As you can see, once that is done a message appears at the top of the screen tha
 28
 00:01:18,000 --> 00:01:24,000
 that the deck has been created. We can also see the deck listed in the table below.
+
+29
+00:01:25,000 --> 00:01:29,000
+And, you will notice that at the moment the deck is empty and there is a card count of zero.
+
+30
+00:01:30,000 --> 00:01:33,000
+There are two different ways to manage the flashcards in this deck:
+
+31
+00:01:34,000 --> 00:01:39,000
+You can click on the manage flashcards link at the top of the screen which will allow you to manage the flashcards in any deck
+
+32
+00:01:40,000 --> 00:01:41,000
+not just this deck.
+
+33
+00:01:42,000 --> 00:01:46,000
+Or, you can click on the manage flashcards button here which allows you to manage the flashcards of this specific deck.
+
+34
+00:01:47,000 --> 00:01:51,000
+For now I'm going to manage the flashcards for this deck by clicking on the button here.
+
+35
+00:01:52,000 --> 00:01:56,000
+As you can probably tell, the flashcard manager is very similar to the deck manager.
+
+36
+00:01:57,000 --> 00:02:04,000
+We have a form at the top of the screen which allows you to create a new flashcard and the deck has automatically been selected as the Japanese deck.
+
+37
+00:02:05,000 --> 00:02:09,000
+From here we can enter the front and the back of the flashcard.
+
+38
+00:02:10,000 --> 00:02:19,000
+So, as an example I'm going to write the flashcard here. And once you fill that in you click on the create flashcard button.
+
+
+39
+00:02:20,000 --> 00:02:24,000
+A message has appeared at the top of the screen again, this time it says that a flashcard has been created.
+
+
+40
+00:02:25,000 --> 00:02:36,000
+And we can see in the table below our flashcard which is in the Japanese deck. Here we have the front of the card. The back of the card. When the card is due. And some tools such as edit and delete.
+
+
+41
+00:02:37,000 --> 00:02:45,000
+The due is something worth explaining. This is the main focus of this website.
+
+
+42
+00:02:46,000 --> 00:02:52,000
+It's a spacing algorithm which determines how often you will see this flashcard.
+
+
+43
+00:02:53,000 --> 00:03:02,000
+As an example; if you have 10,000 flashcards, each with a different word, and you want to make sure that you know all of these words on all of these flashcards...
+
+
+44
+00:03:03,000 --> 00:03:09,000
+It's not viable to review 10,000 flashcards every day because this will take a long amount of time.
+
+45
+00:03:10,000 --> 00:03:22,000
+So what we have is a spaced repetition algorithm which tries to predict when you are going to forget the flashcard and will only show you the flashcard directly before you are about to forget that card.
+
+46
+00:03:23,000 --> 00:03:29,000
+What that means is you can have 10,000 flashcards but you are only reviewing 20 or 30 in one day.
+
+47
+00:03:30,000 --> 00:03:33,000
+Which can significantly reduce the amount of time that you spend reviewing flashcards.
+
+48
+00:03:34,000 --> 00:03:39,000
+Now that we have out first flashcard it's time to try reviewing our flashcards.
+
+49
+00:03:40,000 --> 00:03:44,000
+It's important to note that you don't review individual flashcards; you review the deck that the flashcards are a part of.
+
+50
+00:03:03,000 --> 00:03:05,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+51
+00:03:03,000 --> 00:03:05,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+52
+00:03:03,000 --> 00:03:05,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+53
+00:03:03,000 --> 00:03:05,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+28
+00:03:03,000 --> 00:03:05,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+28
+00:03:03,000 --> 00:03:05,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+28
+00:03:03,000 --> 00:03:05,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+28
+00:03:03,000 --> 00:03:05,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+28
+00:02:05,000 --> 00:02:05,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+
+28
+00:02:05,000 --> 00:02:05,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+
+28
+00:02:05,000 --> 00:02:05,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+
+28
+00:02:05,000 --> 00:02:05,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+
+28
+00:02:05,000 --> 00:02:05,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+
+28
+00:02:05,000 --> 00:02:05,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+
+28
+00:02:05,000 --> 00:02:05,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+28
+00:01:18,000 --> 00:01:24,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+28
+00:01:18,000 --> 00:01:24,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+28
+00:01:18,000 --> 00:01:24,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+28
+00:01:18,000 --> 00:01:24,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+28
+00:01:18,000 --> 00:01:24,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+28
+00:01:18,000 --> 00:01:24,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+28
+00:01:18,000 --> 00:01:24,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+28
+00:01:18,000 --> 00:01:24,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+28
+00:01:18,000 --> 00:01:24,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+28
+00:01:18,000 --> 00:01:24,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+28
+00:01:18,000 --> 00:01:24,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+28
+00:01:18,000 --> 00:01:24,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+28
+00:01:18,000 --> 00:01:24,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+28
+00:01:18,000 --> 00:01:24,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+28
+00:01:18,000 --> 00:01:24,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+28
+00:01:18,000 --> 00:01:24,000
+that the deck has been created. We can also see the deck listed in the table below.
+
+28
+00:01:18,000 --> 00:01:24,000
+that the deck has been created. We can also see the deck listed in the table below.
+
