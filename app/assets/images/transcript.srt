@@ -138,31 +138,25 @@ From here we can enter the front and the back of the flashcard.
 00:02:10,000 --> 00:02:19,000
 So, as an example I'm going to write the flashcard here. And once you fill that in you click on the create flashcard button.
 
-
 39
 00:02:20,000 --> 00:02:24,000
 A message has appeared at the top of the screen again, this time it says that a flashcard has been created.
-
 
 40
 00:02:25,000 --> 00:02:36,000
 And we can see in the table below our flashcard which is in the Japanese deck. Here we have the front of the card. The back of the card. When the card is due. And some tools such as edit and delete.
 
-
 41
 00:02:37,000 --> 00:02:45,000
 The due is something worth explaining. This is the main focus of this website.
-
 
 42
 00:02:46,000 --> 00:02:52,000
 It's a spacing algorithm which determines how often you will see this flashcard.
 
-
 43
 00:02:53,000 --> 00:03:02,000
 As an example; if you have 10,000 flashcards, each with a different word, and you want to make sure that you know all of these words on all of these flashcards...
-
 
 44
 00:03:03,000 --> 00:03:09,000
@@ -189,136 +183,17 @@ Now that we have out first flashcard it's time to try reviewing our flashcards.
 It's important to note that you don't review individual flashcards; you review the deck that the flashcards are a part of.
 
 50
-00:03:03,000 --> 00:03:05,000
-that the deck has been created. We can also see the deck listed in the table below.
+00:03:45,000 --> 00:03:49,000
+The first thing we need to do is go to the top of the screen and click on the manage decks button.
 
 51
-00:03:03,000 --> 00:03:05,000
-that the deck has been created. We can also see the deck listed in the table below.
+00:03:50,000 --> 00:03:55,000
+From here we can see our deck the Japanese deck, it now has a card count of 1 which is to be expected.
 
 52
-00:03:03,000 --> 00:03:05,000
-that the deck has been created. We can also see the deck listed in the table below.
+00:03:56,000 --> 00:03:59,000
+To review this, all we need to do is click on the review deck button.
 
 53
-00:03:03,000 --> 00:03:05,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-28
-00:03:03,000 --> 00:03:05,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-28
-00:03:03,000 --> 00:03:05,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-28
-00:03:03,000 --> 00:03:05,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-28
-00:03:03,000 --> 00:03:05,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-28
-00:02:05,000 --> 00:02:05,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-
-28
-00:02:05,000 --> 00:02:05,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-
-28
-00:02:05,000 --> 00:02:05,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-
-28
-00:02:05,000 --> 00:02:05,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-
-28
-00:02:05,000 --> 00:02:05,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-
-28
-00:02:05,000 --> 00:02:05,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-
-28
-00:02:05,000 --> 00:02:05,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-28
-00:01:18,000 --> 00:01:24,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-28
-00:01:18,000 --> 00:01:24,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-28
-00:01:18,000 --> 00:01:24,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-28
-00:01:18,000 --> 00:01:24,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-28
-00:01:18,000 --> 00:01:24,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-28
-00:01:18,000 --> 00:01:24,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-28
-00:01:18,000 --> 00:01:24,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-28
-00:01:18,000 --> 00:01:24,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-28
-00:01:18,000 --> 00:01:24,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-28
-00:01:18,000 --> 00:01:24,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-28
-00:01:18,000 --> 00:01:24,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-28
-00:01:18,000 --> 00:01:24,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-28
-00:01:18,000 --> 00:01:24,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-28
-00:01:18,000 --> 00:01:24,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-28
-00:01:18,000 --> 00:01:24,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-28
-00:01:18,000 --> 00:01:24,000
-that the deck has been created. We can also see the deck listed in the table below.
-
-28
-00:01:18,000 --> 00:01:24,000
-that the deck has been created. We can also see the deck listed in the table below.
-
+00:04:00,000 --> 00:04:03,000
+This screen is the reviewing screen.
