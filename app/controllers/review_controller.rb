@@ -31,7 +31,7 @@ class ReviewController < ApplicationController
 		redirect_to deck_review_index_path(params[:deck_id])
 
     # log the review in the review logs
-    ReviewLog.create(:score => response, :deck_id => params[:deck_id], :date => Time.now)
+    ReviewLog.create(:score => response, :deck_id => params[:deck_id], :date => Date.today.strftime("%Y-%m-%d"))
 	end
 
 	def show
